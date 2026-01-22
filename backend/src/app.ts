@@ -8,6 +8,7 @@ app.use(express.json());
 
 app.use(cors())
 
-// Routes
-app.get('/test', handleRequestToShortUrl);
+app.post('/urls', generateShortUrl);
+app.get('/urls/:shortUrl', handleRequestToShortUrl);
+
 export default app;
